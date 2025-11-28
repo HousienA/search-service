@@ -76,9 +76,8 @@ public class PractitionerSearch {
                     )
                     .collect(Collectors.toList());
 
-            // Combine all Unis into a single list
             return Uni.combine().all().unis(enrichedEncounters)
-                    .combinedWith(list -> list.stream()
+                    .with(list -> list.stream()
                             .map(obj -> (Encounter) obj)
                             .collect(Collectors.toList())
                     );
