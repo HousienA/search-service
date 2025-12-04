@@ -24,7 +24,7 @@ public class Encounter extends PanacheEntityBase {
 
     public String diagnosis;
 
-    @Column(length = 5000)
+    @Column(columnDefinition = "TEXT")
     public String notes;
 
     @Column(name = "patient_id")
